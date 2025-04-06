@@ -1,36 +1,107 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 FLEX - Full Stack Next.js Social Media App
 
-## Getting Started
+This is a modern full-stack web application built with **Next.js App Router**, featuring full authentication, file uploads, optimistic UI updates, and a fully typed Postgres database integration with Prisma.
 
-First, run the development server:
+## 🌐 Live Demo
+
+Check out the live app here: [https://your-deployment-url.com](https://your-deployment-url.com)  
+> Replace this link with your actual deployed URL.
+
+---
+
+## 🧩 Tech Stack
+
+- **Framework**: [Next.js 14](https://nextjs.org/)
+- **Language**: TypeScript
+- **Database**: PostgreSQL
+- **ORM**: [Prisma](https://www.prisma.io/)
+- **Auth**: [Clerk](https://clerk.dev/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/), [Shadcn/UI](https://ui.shadcn.com/)
+- **File Uploads**: [UploadThing](https://uploadthing.com/)
+
+---
+
+## 🛠 Features
+
+- ✅ App Router: Server Components, Layouts, Route Handlers
+- ✅ Authentication & Authorization with Clerk
+- ✅ File Uploads via UploadThing
+- ✅ Server Actions & Optimistic Updates
+- ✅ Dynamic & Static Routes
+- ✅ Caching & Revalidation
+- ✅ Custom `loading.tsx`, `error.tsx`, `not-found.tsx`
+- ✅ Clean and modern UI using Tailwind + Shadcn
+- ✅ Fully typed Prisma schema and DB access
+
+
+
+## 📦 Getting Started
+
+### 1. Clone the Repository
 
 ```bash
+git clone https://github.com/your-username/your-repo-name.git
+cd your-repo-name
+```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+# or
+yarn install
+```
+
+### 3. Set Up Environment Variables
+Create a .env file in the root with the following variables:
+
+env
+```bash
+DATABASE_URL=postgresql://your-user:your-password@localhost:5432/your-db
+CLERK_PUBLISHABLE_KEY=your-clerk-publishable-key
+CLERK_SECRET_KEY=your-clerk-secret-key
+CLERK_JWT_KEY=your-clerk-jwt-key
+UPLOADTHING_SECRET=your-uploadthing-secret
+UPLOADTHING_APP_ID=your-uploadthing-app-id
+```
+
+⚠️ Make sure you set up your Postgres database and Clerk project accordingly.
+
+### 4. Set Up Prisma
+```bash
+
+npx prisma db push
+(Optional) To generate types and seed data:
+
+
+npx prisma generate
+# npx prisma db seed (if you have a seeder)
+```
+### 5. Run the Development Server
+```bash
+
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000 in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 🚀 Deployment
+This app is ready to deploy on Vercel. Just link your GitHub repo, add your environment variables in the Vercel dashboard, and you're good to go!
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 🧪 Future Improvements
+Admin Dashboard
 
-## Learn More
+### Tests (unit/integration)
 
-To learn more about Next.js, take a look at the following resources:
+Webhooks & Event Tracking
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+CI/CD Pipelines
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 📄 License
+MIT — Feel free to use, modify, and share.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+🙌 Contributions
+Contributions, issues, and feature requests are welcome! Feel free to open a PR.
